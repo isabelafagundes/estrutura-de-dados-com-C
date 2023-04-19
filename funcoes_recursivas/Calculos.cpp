@@ -2,14 +2,14 @@
 	Name: Calculos.cpp
 	Author: Isabela Fagundes
 	Date: 01/03/23 07:57
-	Description: Programa para demonstrar a utilização de funções
+	Description: Programa para demonstrar a utilizaÃ§Ã£o de funÃ§Ãµes
 */
 
 # include <locale.h>
 # include <conio.h>
 # include <stdio.h>
 
-//Sessão de prototipação
+//SessÃ£o de prototipaÃ§Ã£o
 int realizarSoma(int, int);
 int realizarSub(int, int);
 int realizarMulti(int, int);
@@ -20,23 +20,21 @@ main(){
 	
 	setlocale(LC_ALL, "Portuguese");
 	int a, b;
-	//Exmplo de recurssão no código, efeito em cascata:
+	//Exmplo de recurssÃ£o no cÃ³digo, efeito em cascata:
 	a = b = 0;
 	
-//	result = realizarSoma(a, b);
-//	printf("O resultado é: %d", result);
-//	printf("O resultado da soma é: %d", realizarSoma(lerNum(), lerNum()));
-	printf("\nO resultado da divisao é: %.2f", realizarDivi(lerNum(), lerNum()));
-	
-//	printf("\nO resultado da subtração é: %d", realizarSub(a, b));
-//	printf("\nO resultado da multiplicação é: %d", realizarMulti(a, b));
-//	printf("\nO resultado da multiplicação é: %.2f", realizarDivi(a, b));
+	result = realizarSoma(a, b);
+	printf("O resultado Ã©: %d", result);
+	printf("O resultado da soma Ã©: %d", realizarSoma(lerNum(), lerNum()));	
+	printf("\nO resultado da subtraÃ§Ã£o Ã©: %d", realizarSub(a, b));
+	printf("\nO resultado da multiplicaÃ§Ã£o Ã©: %d", realizarMulti(a, b));
+	printf("\nO resultado da multiplicaÃ§Ã£o Ã©: %.2f", realizarDivi(a, b));
 
 }
 
 int lerNum(){
 	int num;
-	printf("Digite um número: ");
+	printf("Digite um nÃºmero: ");
 	scanf("%d", &num);
 	return num;
 }
