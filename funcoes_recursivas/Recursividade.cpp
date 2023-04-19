@@ -20,7 +20,7 @@ main(){
 	scanf("%d", &n);
 	i = n;
 	
-	linha(n, i);
+	regressiva(n, i);
 	
 }
 
