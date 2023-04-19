@@ -2,39 +2,39 @@
 	Name: ListaLigada.cpp
 	Author: Isabela Fagundes
 	Date: 22/03/23 09:47
-	Description: Implementação da lista encadeada simples
+	Description: ImplementaÃ§Ã£o da lista encadeada simples
 */
 
-// Nó é o elemento que engloba os valores + campo para apontar para o próximo Nó
-// malloc() (memory alocation) -> Aloca na memória
+// NÃ³ Ã© o elemento que engloba os valores + campo para apontar para o prÃ³ximo NÃ³
+// malloc() (memory alocation) -> Aloca na memÃ³ria
 // sizeof() (tamanho de) -> Retorna o tamanho de um tipo
 
 # include <stdio.h>
 # include <conio.h>
 # include <stdlib.h>
 
-//Estrutura para um Nó (node) da lista, contendo duas informações:
+//Estrutura para um NÃ³ (node) da lista, contendo duas informaÃ§Ãµes:
 typedef struct No{
 	
 	int valor;
-	struct No *proximo; //Guarda o endereço de memória no próximo Nó
+	struct No *proximo; //Guarda o endereÃ§o de memÃ³ria no prÃ³ximo NÃ³
 };
 
-//Estrutura que é a própria Lista ligada com vários Nós:
+//Estrutura que Ã© a prÃ³pria Lista ligada com vÃ¡rios NÃ³s:
 typedef struct Lista{
 	
-	No *inicio, *fim; //Guarda endereço de memório do ínicio e do fim
+	No *inicio, *fim; //Guarda endereÃ§o de memÃ³rio do Ã­nicio e do fim
 	int tamanho; //Tamanho da lista
 };
 
-//Função para inserir elementos no início da lista:
+//FunÃ§Ã£o para inserir elementos no inÃ­cio da lista:
 void inserirInicio(Lista *lista, int vlr){
 	
-//tipoNó ponteiro = (Casting do tipo Nó)(Aloca na memória(O tamanho do(Nó));	
+//tipoNÃ³ ponteiro = (Casting do tipo NÃ³)(Aloca na memÃ³ria(O tamanho do(NÃ³));	
 	No *novo = (No*)malloc(sizeof(No));
 	novo->valor = vlr;
 	
-	//Se a lista está vazia:
+	//Se a lista estÃ¡ vazia:
 	if(lista->inicio == NULL){	
 		
 		novo->proximo = NULL;
@@ -51,12 +51,12 @@ void inserirInicio(Lista *lista, int vlr){
 	lista->tamanho++;
 }
 
-//Função para inserir elementos no fim da lista:
+//FunÃ§Ã£o para inserir elementos no fim da lista:
 void inserirFim(Lista *lista, int vlr){
 	
-	No *novo = (No*)malloc(sizeof(No)); //Cria o novo nó
+	No *novo = (No*)malloc(sizeof(No)); //Cria o novo nÃ³
 	novo->valor = vlr;
-	novo->proximo = NULL; //último elemento da lista sempre aponta para NULL
+	novo->proximo = NULL; //Ãºltimo elemento da lista sempre aponta para NULL
 	
 	//Se a Lista estiver vazia
 	if(lista->inicio == NULL){
@@ -82,7 +82,7 @@ void imprimirLista(Lista *lista){
 	No *inicio = lista->inicio;
 	printf("Tamanho da Lista: %d\n\n", lista->tamanho);
 	
-	//Laço para percorrer todos os nós da lista
+	//LaÃ§o para percorrer todos os nÃ³s da lista
 	while(inicio != NULL){
 		printf("%d ", inicio->valor);
 		inicio = inicio->proximo;
