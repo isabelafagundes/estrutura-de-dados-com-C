@@ -2,26 +2,27 @@
 	Name: Fila.cpp
 	Author: Isabela Fagundes
 	Date: 05/04/23 09:41
-	Description: ImplementaÁ„o do conceito de Filas - FIFO
+	Description: Implementa√ß√£o do conceito de Filas - FIFO
 */
 
 #include <conio.h>
 #include <stdio.h>
+#include <locale.h>
 #include <windows.h>
 
-//prototipaÁ„o
+//prototipa√ß√£o
 void inserir(int); // inserir um elemento no fim da fila
-int retirar(); // retira um elemento do comeÁo da fila
-int estaVazio(); // testa se a fila est· vazia
-int estaCheio(); // testa se a fila est· cheia
+int retirar(); // retira um elemento do come√ßo da fila
+int estaVazio(); // testa se a fila est√° vazia
+int estaCheio(); // testa se a fila est√° cheia
 void imprimirFila(); // imprimir fila
 
-//vari·veis globais
+//vari√°veis globais
 int inicio, fim, total;
 int senhas[5]; //estrutura de fila com 5 elementos
 
 main(){
-	
+	setlocale(LC_ALL, "Portuguese");
 	inicio = 0;
 	fim = 0;
 	total = 0;
@@ -45,9 +46,9 @@ main(){
 			case 3: imprimirFila();
 					break;
 			case 4: exit(0);
-			default: printf("Opcao invalida beijos");				
+			default: printf("Opcao inv√°lida!");				
 		}
-		puts("\n>>>>>> Pressione qualquer tecla :)");
+		puts("\n>>>>>> Pressione qualquer tecla");
 		getch(); //captura o pressionar de qualquer tecla
 		system("cls");//limpa a tela
 		
@@ -58,12 +59,12 @@ main(){
 // inserir um elemento no fim da fila
 void inserir(int elem){
 	
-	if(estaCheio() == 1) puts("A fila est· cheia!");
+	if(estaCheio() == 1) puts("A fila est√° cheia!");
 	else {
 		
-		senhas[fim] = elem; //insrÁ„o de um elemento no final da fila
+		senhas[fim] = elem; //insr√ß√£o de um elemento no final da fila
 		
-		//com este c·lculo podemos descobrir a posiÁ„o apÛs o ˙ltimo elemento, assim definindo o novo fim
+		//com este c√°lculo podemos descobrir a posi√ß√£o ap√≥s o √∫ltimo elemento, assim definindo o novo fim
 		fim = (fim+1)%5;
 		total++;
 	}
@@ -71,16 +72,16 @@ void inserir(int elem){
 	
 }
 
-// retira um elemento do comeÁo da fila
+// retira um elemento do come√ßo da fila
 int retirar(){
 	
-	if(estaVazio() == 1) puts("A fila est· vazia!");
+	if(estaVazio() == 1) puts("A fila est√° vazia!");
 	else {
 		
 		int elemento;
 		elemento = senhas[inicio]; 
 		
-		//com este c·lculo podemos descobrir a posiÁ„o apÛs o elemento inicial, assim definindo o novo inÌcio
+		//com este c√°lculo podemos descobrir a posi√ß√£o ap√≥s o elemento inicial, assim definindo o novo in√≠cio
 		inicio = (inicio+1)%5; 
 		total--;
 		return elemento;
@@ -89,7 +90,7 @@ int retirar(){
 	
 }
 
-// testa se a fila est· vazia
+// testa se a fila est√° vazia
 int estaVazio(){
 	
 	if(total == 0) return 1; //true
@@ -97,7 +98,7 @@ int estaVazio(){
 	
 }
 
- // testa se a fila est· cheia
+ // testa se a fila est√° cheia
  int estaCheio(){
  	
  	if(total == 5) return 1;//true
