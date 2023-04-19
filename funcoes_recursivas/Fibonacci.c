@@ -2,7 +2,7 @@
 	Name: Fibonacci.cpp
 	Author: Isabela Fagundes
 	Date: 08/03/23 09:48
-	Description: Programa pra demonstrar a sequência de Fibonacci
+	Description: Programa pra demonstrar a sequÃªncia de Fibonacci
 	1,1,2,3,5,8,13,21,34,55...
 	ant., atual, prox.
 */
