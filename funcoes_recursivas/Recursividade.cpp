@@ -2,15 +2,15 @@
 	Name: Recursividade.cpp
 	Author: Isabela Fagundes
 	Date: 01/03/23 10:03
-	Description: Programa para demonstrar o conceito de execuÁ„o de recursividade
+	Description: Programa para demonstrar o conceito de execu√ß√£o de recursividade
 */
 
 # include <stdio.h>
 
-//Sess„o de protatipaÁ„o:
-int linha(int, int);
+//Sess√£o de protatipa√ß√£o:
+int regressiva(int, int);
 
-//Vari·veis globais:
+//Vari√°veis globais:
 int n = 0;
 int i = n;
 
@@ -29,5 +29,5 @@ int linha(int n, int i){
 	if(n < -i) return 1;
 		
 	printf("%d ", n--);
-	linha(n, i); 	
+	regressiva(n, i); 	
 }
