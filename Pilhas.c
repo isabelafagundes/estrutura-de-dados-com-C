@@ -10,19 +10,19 @@
 #include <windows.h>
 #include <locale.h>
 
-//sessão de prototipação
+//sessÃ£o de prototipaÃ§Ã£o
 void push(char); //inserir elemento
 char pop(); //retira um elemento
-int isEmpty(); //se está vazia
-int isFull();// se está cheia
+int isEmpty(); //se estÃ¡ vazia
+int isFull();// se estÃ¡ cheia
 char top(); //aponta pro elemento do topo da lista
 void listarPilha(); //imprime elementos da pilha
 void conversorBinario();
 void exibirNumBinario();
 
-//variáveis globais
+//variÃ¡veis globais
 char pilha[10];
-int topo = -1; //recebe -1 para indicar que ele não está apontando pra nenhum elemento da pilha
+int topo = -1; //recebe -1 para indicar que ele nÃ£o estÃ¡ apontando pra nenhum elemento da pilha
 
 
 
@@ -33,15 +33,15 @@ main (){
 	while(1){
 		
 	int opc = 0;
-	printf("\n1 ==> Inserir elemento\n2 ==> Retirar elemento\n3 ==> Exibir elementos\n4 ==> Conversor binário\n5 ==> Sair");
-	printf("\n\nInsira uma opção: ");
+	printf("\n1 ==> Inserir elemento\n2 ==> Retirar elemento\n3 ==> Exibir elementos\n4 ==> Conversor binÃ¡rio\n5 ==> Sair");
+	printf("\n\nInsira uma opÃ§Ã£o: ");
 	scanf("%d", &opc);
 		
 		switch(opc){
 			case 1: char e;
 					e = ' ';
 					printf("Insira um caractere na pilha de letras: ");
-					fflush(stdin); //limpa o buffer de saída
+					fflush(stdin); //limpa o buffer de saÃ­da
 					scanf("%c", &e);
 					push(e);
 					break;
@@ -52,7 +52,7 @@ main (){
 			case 4: conversorBinario();
 					break;
 			case 5: exit(0);
-			default: puts("Opção inválida, digite novamente!");
+			default: puts("OpÃ§Ã£o invÃ¡lida, digite novamente!");
 		}
 		
 		puts("\n>>>>>> Pressione qualquer tecla :)");
@@ -106,11 +106,11 @@ char top(){
 
 void listarPilha(){
 	
-	puts("\n Conteúdo da Pilha: ");
+	puts("\n ConteÃºdo da Pilha: ");
 	if(isEmpty() == 1) puts("====> Pilha vazia");
 	else for(int i = topo; i >= 0; i--){
 		
-		printf("\n %d | %c |", i, pilha[i]);//mostra o índice | caractere
+		printf("\n %d | %c |", i, pilha[i]);//mostra o Ã­ndice | caractere
 		
 	}
 	
@@ -119,13 +119,13 @@ void listarPilha(){
 void conversorBinario(){
 	
 	int numBaseDez = 0;
-	printf("Digite um número na base 10: ");
+	printf("Digite um nÃºmero na base 10: ");
 	scanf("%d", &numBaseDez);
 	
 	while(numBaseDez >= 2){
 		
 		push(numBaseDez%2); //insere o resto na pilha
-		numBaseDez = numBaseDez/2; //efetua divisão por 2 enquando for maior ou igual a 2
+		numBaseDez = numBaseDez/2; //efetua divisÃ£o por 2 enquando for maior ou igual a 2
 		
 	}
 	
@@ -136,14 +136,14 @@ void conversorBinario(){
 
 void exibirNumBinario(){
 	
-	puts("Enquivalente Binário: ");
+	puts("Enquivalente BinÃ¡rio: ");
 	while(isEmpty() == 0){
 		
 		int elemento;
-		elemento = pop(); //pop retorna o último a entrar
+		elemento = pop(); //pop retorna o Ãºltimo a entrar
 		printf("%d", elemento);
-		//char pode ser exibido com %c (mostrando seus caracteres alfabéticos)
-		//ou %d (mostrando seus caracteres numéricos).
+		//char pode ser exibido com %c (mostrando seus caracteres alfabÃ©ticos)
+		//ou %d (mostrando seus caracteres numÃ©ricos).
 		
 	}
 	
