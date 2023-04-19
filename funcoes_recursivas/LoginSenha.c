@@ -1,19 +1,19 @@
 /*
-	Name: Fila.cpp
+	Name: LoginSenha.c
 	Author: Isabela Fagundes
 	Date: 05/04/23 09:41
-	Description: Implementação do conceito de Filas - FIFO
+	Description: ImplementaÃ§Ã£o de sistema de Login e Senha utilizando funÃ§Ãµes recursivas!
 */
 
 #include <conio.h>
 #include <stdio.h>
 #include <locale.h>
 
-//prototipação
+//prototipaÃ§Ã£o
 void inserirLogin();
 void inserirSenha();
 
-//variáveis globais
+//variÃ¡veis globais
 char username = 'I';
 int senha = 1234;
 int chances = 0;
@@ -30,7 +30,7 @@ void inserirLogin(){
 	
 	printf("Insira seu username: ");
 	scanf(" %c", &nome);
-	//espaço antes do %c para zerar o buffer
+	//espaÃ§o antes do %c para zerar o buffer
 	
 	if(username == nome) inserirSenha();
 	else inserirLogin();
@@ -45,7 +45,7 @@ void inserirSenha(){
 	scanf("%d", &pwd);
 	chances++;
 	
-	if(senha == pwd) puts("Você efetuou login com sucesso!");
+	if(senha == pwd) puts("VocÃª efetuou login com sucesso!");
 	else if(chances < 3) inserirLogin();
 	else puts("Suas chances acabaram! Encerrando o sistema...");
 		
