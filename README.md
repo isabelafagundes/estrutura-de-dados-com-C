@@ -5,6 +5,8 @@ Além de estrutura de dados, este repositório também possui códigos de funç�
 - Estruturas de dados:
   - Listas
   - Pilhas
+  - Filas
+  
   
 - Métodos de Ordenação:
   - Bubble Sort
@@ -13,6 +15,7 @@ Além de estrutura de dados, este repositório também possui códigos de funç�
   - Merge Sort
   - Shell Sort
   - Quick Sort
+
 
 - Métodos de Busca
   - Busca Binária ou Logarítmica 
